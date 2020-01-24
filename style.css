@@ -1,0 +1,14 @@
+/*
+Theme Name: Greystone
+Theme URI: greystone.chrisvasquez.dev
+Author: Chris Vasquez
+Author URI: chrisvasquez.dev
+Version: 1.0
+Text Domain: greystone
+*/
+html {
+  width: 100%; }
+
+#home {
+  padding-left: 0;
+  padding-right: 0; }
