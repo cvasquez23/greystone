@@ -1,6 +1,13 @@
 #home {
   padding-left: 0;
   padding-right: 0;
+
+  .hero-text {
+    color: white;
+    position: absolute;
+    top: 30%;
+    width: 96.667%;
+  }
 }
 
 #about {
@@ -8,11 +15,7 @@
 }
 
 #events {
-  background-color: grey;
-}
-
-#visit {
-  background-color: indigo;
+  background-color: ghostwhite;
 }
 
 #hours {

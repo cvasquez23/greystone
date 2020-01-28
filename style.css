@@ -17,14 +17,14 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
-  padding-left: 160px; }
+  padding-left: 125px; }
 
 .carousel-item {
-  height: 50vh; }
+  height: 100vh; }
 
 .sidebar-container {
   position: fixed;
-  width: 150px;
+  width: 125px;
   height: 100%;
   left: 0;
   text-align: left;
@@ -34,9 +34,11 @@ body {
   color: white;
   z-index: 100;
   transition: all 0.5s ease-in-out; }
+  .sidebar-container .sidebar-logo {
+    overflow: hidden; }
   .sidebar-container ul {
     list-style: none;
-    padding-left: 0;
+    padding-left: 0px;
     display: grid; }
     .sidebar-container ul .nav-item {
       display: inline-block;
@@ -46,13 +48,16 @@ body {
       white-space: nowrap;
       padding: 20px 0 10px 0;
       transition: all 0.5s ease-in-out; }
+      .sidebar-container ul .nav-item .nav-link {
+        text-align: center; }
       .sidebar-container ul .nav-item i {
-        font-size: 2rem; }
+        font-size: 2rem;
+        float: left; }
   .sidebar-container span {
     opacity: 0;
     transition: all 0.3s ease-in-out; }
   .sidebar-container:hover {
-    width: 200px; }
+    width: 250px; }
     .sidebar-container:hover .nav-item {
       margin-left: 15%; }
     .sidebar-container:hover span {
@@ -61,15 +66,17 @@ body {
 #home {
   padding-left: 0;
   padding-right: 0; }
+  #home .hero-text {
+    color: white;
+    position: absolute;
+    top: 30%;
+    width: 96.667%; }
 
 #about {
   background-color: ghostwhite; }
 
 #events {
-  background-color: grey; }
-
-#visit {
-  background-color: indigo; }
+  background-color: ghostwhite; }
 
 #hours {
   background-color: grey; }
