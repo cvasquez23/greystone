@@ -11,7 +11,13 @@
 }
 
 #about {
-  background-color: ghostwhite;
+  background-color: $primary-color;
+
+  .abt-pic {
+    img {
+      border-radius: 50%;
+    }
+  }
 }
 
 #events {
@@ -19,5 +25,10 @@
 }
 
 #hours {
-  background-color: grey;
+  background-color: $secondary-color;
+}
+
+#happy-hour {
+  background-color: $primary-color;
+  color: $secondary-color;
 }

@@ -1,0 +1,27 @@
+.body {
+  color: $text-color;
+}
+
+.sidebar-container {
+  color: $secondary-color;
+
+  .nav-item {
+    a {
+      color: $text-color;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+#about {
+  color: $secondary-text;
+}
+
+footer {
+  i {
+    font-size: 2rem;
+  }
+}
