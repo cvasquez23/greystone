@@ -7,6 +7,7 @@
     position: absolute;
     top: 30%;
     width: 96.667%;
+    z-index: 100;
   }
 }
 
@@ -20,10 +21,6 @@
   }
 }
 
-#events {
-  background-color: ghostwhite;
-}
-
 #hours {
   background-color: $secondary-color;
 }
@@ -31,4 +28,17 @@
 #happy-hour {
   background-color: $primary-color;
   color: $secondary-color;
+}
+
+#showcase {
+  .showcase-box {
+    background-color: black;
+    text-align: center;
+  }
+  .showcase-img {
+  }
+}
+
+#events {
+  background-color: $secondary-color;
 }

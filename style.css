@@ -17,11 +17,32 @@ body {
 .wrapper {
   position: relative;
   height: 100%;
-  width: 100%;
-  padding-left: 125px; }
+  width: 100%; }
 
-.body {
+h2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
+.body,
+html {
   color: #1f222b; }
+  .body h1,
+  .body h2,
+  .body h3,
+  .body h4,
+  .body h5,
+  .body h6,
+  html h1,
+  html h2,
+  html h3,
+  html h4,
+  html h5,
+  html h6 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase; }
+  .body p,
+  html p {
+    font-family: 'Noto Serif', serif; }
 
 .sidebar-container {
   color: #e1e4e9; }
@@ -30,8 +51,21 @@ body {
     .sidebar-container .nav-item a:hover {
       color: #e1e4e9; }
 
+#home h1 {
+  font-size: 90px;
+  text-shadow: -1px 0 black, 0 1px black, 0 -1px black; }
+
+#home h6 {
+  font-size: 30px;
+  text-shadow: -1px 0 black, 0 1px black, 0 -1px black; }
+
 #about {
   color: #e1e4e9; }
+
+#showcase {
+  color: #e1e4e9; }
+  #showcase .showcase-box {
+    text-transform: uppercase; }
 
 footer i {
   font-size: 2rem; }
@@ -86,6 +120,10 @@ footer {
       .sidebar-container ul .nav-item i {
         font-size: 2rem;
         float: left; }
+  .sidebar-container h1 {
+    padding-left: 25%; }
+    .sidebar-container h1:hover {
+      padding-left: 0; }
   .sidebar-container span {
     opacity: 0;
     transition: all 0.5s ease-in-out; }
@@ -103,15 +141,13 @@ footer {
     color: white;
     position: absolute;
     top: 30%;
-    width: 96.667%; }
+    width: 96.667%;
+    z-index: 100; }
 
 #about {
   background-color: #1f222b; }
   #about .abt-pic img {
     border-radius: 50%; }
-
-#events {
-  background-color: ghostwhite; }
 
 #hours {
   background-color: #e1e4e9; }
@@ -119,3 +155,10 @@ footer {
 #happy-hour {
   background-color: #1f222b;
   color: #e1e4e9; }
+
+#showcase .showcase-box {
+  background-color: black;
+  text-align: center; }
+
+#events {
+  background-color: #e1e4e9; }

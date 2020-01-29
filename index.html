@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Serif|Oswald:500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
       integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M"
       crossorigin="anonymous"
     />
+    <!-- Bootstrap -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
 
     <title>Greystone</title>
@@ -31,36 +39,86 @@
         <ul class="sidebar-navigation">
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="fas fa-utensils"></i>
-              <span>Food Menu</span>
+              <i class="fas fa-utensils col-3"></i>
+              <span class="col-9">Food Menu</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="fas fa-beer"></i>
-              <span>Beer Menu</span>
+              <i class="fas fa-beer col-3"></i>
+              <span class="col-9">Beer Menu</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="fas fa-wine-glass-alt"></i>
-              <span>Wine Menu</span>
+              <i class="fas fa-wine-glass-alt col-3"></i>
+              <span class="col-9">Wine Menu</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="fas fa-cocktail"></i>
-              <span>Drink Menu</span>
+              <i class="fas fa-cocktail col-3"></i>
+              <span class="col-9">Drink Menu</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="fas fa-calendar-alt"></i>
-              <span>Book a Table</span>
+              <i class="fas fa-calendar-alt col-3"></i>
+              <span class="col-9">Book a Table</span>
             </a>
           </li>
         </ul>
       </div>
+
+      <!-- Mobile Nav -->
+      <nav class="navbar navbar-expand-md d-md-none">
+        <a class="navbar-brand" href="#">GREYSTONE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-utensils col-3"></i>
+                <span class="col-9">Food Menu</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-beer col-3"></i>
+                <span class="col-9">Beer Menu</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-wine-glass-alt col-3"></i>
+                <span class="col-9">Wine Menu</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-cocktail col-3"></i>
+                <span class="col-9">Drink Menu</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-calendar-alt col-3"></i>
+                <span class="col-9">Book a Table</span>
+              </a>
+            </li>
+          </div>
+        </div>
+      </nav>
     </header>
     <!-- Content -->
     <div class="wrapper">
@@ -69,7 +127,11 @@
         <section id="home" class="container-fluid">
           <div class="row">
             <div class="col-12">
-              <div id="carousel" class="carousel slide" data-ride="carousel">
+              <div
+                id="carousel"
+                class="carousel slide carousel-fade"
+                data-ride="carousel"
+              >
                 <div class="carousel-inner">
                   <!-- Carousel Item 2 -->
                   <div class="carousel-item active">
@@ -95,7 +157,7 @@
           </div>
         </section>
         <section id="about">
-          <div class="container text-center p-4">
+          <div class="container text-center">
             <h2>Our Story</h2>
             <div class="row">
               <div class="col-md-6">
@@ -113,7 +175,8 @@
                   distinctio aut sed at odit cupiditate temporibus facilis
                   impedit harum, nisi consequatur. Voluptatum, non voluptatem!
                   Nulla sapiente, rerum ipsa explicabo corporis aliquam quia
-                  soluta pariatur iste dolores omnis.
+                  soluta pariatur iste dolores omnis. <br /><br />
+                  <span>Lorem Ipsum - Owner</span>
                 </p>
               </div>
               <div class="col-md-6 abt-pic">
@@ -124,7 +187,7 @@
         </section>
         <section id="hours">
           <div class="container text-center">
-            <div class="row justify-content-center p-4">
+            <div class="row justify-content-center">
               <h2>Visit</h2>
             </div>
             <div class="row">
@@ -194,6 +257,62 @@
                   Wednesday &dot; 5 PM - Close &dot; $2 off specialty drinks /
                   $1 off pints
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="showcase">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 col-md-3 p-0">
+                <div
+                  class="showcase-box h-100 d-flex justify-content-center flex-column"
+                >
+                  <span>APPS</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 p-0">
+                <div class="showcase-img">
+                  <img src="./img/showcase/appetizer.jpg" class="img-fluid" />
+                </div>
+              </div>
+              <div class="col-6 col-md-3 p-0">
+                <div
+                  class="showcase-box h-100 d-flex justify-content-center flex-column"
+                >
+                  <span>Specialty Pizzas</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 p-0">
+                <div class="showcase-img">
+                  <img src="./img/showcase/pizza.jpg" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-3 p-0">
+                <div class="showcase-img">
+                  <img src="./img/showcase/burger.jpg" class="img-fluid" />
+                </div>
+              </div>
+              <div class="col-6 col-md-3 p-0">
+                <div
+                  class="showcase-box h-100 d-flex justify-content-center flex-column"
+                >
+                  <span>Burgers</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 p-0">
+                <div class="showcase-img">
+                  <img src="./img/showcase/cocktail.jpg" class="img-fluid" />
+                </div>
+              </div>
+              <div class="col-6 col-md-3 p-0">
+                <div
+                  class="showcase-box h-100 d-flex justify-content-center flex-column"
+                >
+                  <span>DRINKS</span>
+                </div>
               </div>
             </div>
           </div>
@@ -276,5 +395,6 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
