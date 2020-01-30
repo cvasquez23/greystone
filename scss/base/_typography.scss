@@ -50,6 +50,11 @@ html {
 #showcase {
   color: $secondary-text;
 
+  span {
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+  }
+
   .showcase-box {
     text-transform: uppercase;
   }

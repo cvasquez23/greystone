@@ -1,4 +1,3 @@
-// Breakpoint Mixins
 @mixin for-xl-only {
   @media only screen and (min-width: 1400px) {
     @content;

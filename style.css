@@ -18,6 +18,9 @@ body {
   position: relative;
   height: 100%;
   width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .wrapper {
+      padding-left: 125px; } }
 
 h2 {
   padding-top: 2rem;
@@ -64,6 +67,9 @@ html {
 
 #showcase {
   color: #e1e4e9; }
+  #showcase span {
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif; }
   #showcase .showcase-box {
     text-transform: uppercase; }
 
@@ -159,6 +165,12 @@ footer {
 #showcase .showcase-box {
   background-color: black;
   text-align: center; }
+
+#showcase .showcase-img img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed; }
 
 #events {
   background-color: #e1e4e9; }
