@@ -57,6 +57,7 @@
 
   &:hover {
     width: 250px;
+    display: block;
 
     .nav-item {
       margin-left: 15%;
@@ -64,6 +65,18 @@
 
     span {
       opacity: 1;
+    }
+  }
+}
+
+nav {
+  background-color: $alternative-color;
+
+  a {
+    color: $secondary-text;
+
+    &:hover {
+      color: $secondary-text;
     }
   }
 }

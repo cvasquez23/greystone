@@ -14,6 +14,11 @@ html {
 
   p {
     font-family: 'Noto Serif', serif;
+    font-size: 14px;
+
+    @include for-md-up {
+      font-size: 16px;
+    }
   }
 }
 
@@ -33,13 +38,21 @@ html {
 
 #home {
   h1 {
-    font-size: 90px;
+    font-size: 45px;
     text-shadow: -1px 0 black, 0 1px black, 0 -1px black;
+
+    @include for-md-up {
+      font-size: 90px;
+    }
   }
 
   h6 {
-    font-size: 30px;
+    font-size: 20px;
     text-shadow: -1px 0 black, 0 1px black, 0 -1px black;
+
+    @include for-md-up {
+      font-size: 30px;
+    }
   }
 }
 
@@ -51,8 +64,12 @@ html {
   color: $secondary-text;
 
   span {
-    font-size: 50px;
+    font-size: 25px;
     font-family: 'Oswald', sans-serif;
+
+    @include for-md-up {
+      font-size: 50px;
+    }
   }
 
   .showcase-box {
@@ -61,7 +78,16 @@ html {
 }
 
 footer {
+  color: $secondary-text;
+
   i {
     font-size: 2rem;
+    padding: 0, 0.5rem, 0, 0.5rem;
+  }
+
+  .credit {
+    a {
+      color: #4eb89f;
+    }
   }
 }

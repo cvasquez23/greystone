@@ -1,6 +1,13 @@
 footer {
-  color: $secondary-color;
   hr {
     border-color: $secondary-color;
+  }
+
+  i {
+    padding: 0 1rem 0 1rem;
+  }
+
+  .credit {
+    padding-bottom: 1rem;
   }
 }
