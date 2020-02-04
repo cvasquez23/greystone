@@ -15,6 +15,7 @@ Text Domain: greystone
 
 @import 'layout/header', 'layout/footer';
 
-@import 'components/carousel', 'components/navbar', 'components/buttons';
+@import 'components/carousel', 'components/cards', 'components/navbar',
+  'components/buttons';
 
 @import 'pages/home';

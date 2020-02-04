@@ -161,6 +161,17 @@ html {
   #showcase .showcase-box {
     text-transform: uppercase; }
 
+#events h5 {
+  color: #e1e4e9;
+  text-shadow: -1px 0 black, 0 1px black, 0 -1px black; }
+
+#events p {
+  color: #e1e4e9;
+  text-shadow: -1px 0 black, 0 1px black, 0 -1px black; }
+
+#events .card-month {
+  text-transform: uppercase; }
+
 footer {
   color: #e1e4e9; }
   footer i {
@@ -190,6 +201,30 @@ footer .credit {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.3); }
+
+#events {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  #events .card {
+    height: 300px;
+    width: 300px;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+    #events .card::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.4); }
+    #events .card .card-date,
+    #events .card .card-body {
+      z-index: 2; }
+    #events .card .card-date {
+      background-color: #a32a2f;
+      padding: 5px 8px 5px 8px; }
 
 .sidebar-container {
   position: fixed;
@@ -224,9 +259,8 @@ footer .credit {
         font-size: 2rem;
         float: left; }
   .sidebar-container h1 {
-    padding-left: 25%; }
-    .sidebar-container h1:hover {
-      padding-left: 0; }
+    padding-left: 25%;
+    transition: all 0.5s ease-in-out; }
   .sidebar-container span {
     opacity: 0;
     transition: all 0.5s ease-in-out; }
@@ -237,6 +271,8 @@ footer .credit {
       margin-left: 15%; }
     .sidebar-container:hover span {
       opacity: 1; }
+    .sidebar-container:hover h1 {
+      padding-left: 0; }
 
 nav {
   background-color: #a32a2f; }

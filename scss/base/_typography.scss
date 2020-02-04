@@ -77,6 +77,21 @@ html {
   }
 }
 
+#events {
+  h5 {
+    color: $secondary-text;
+    text-shadow: -1px 0 black, 0 1px black, 0 -1px black;
+  }
+  p {
+    color: $secondary-text;
+    text-shadow: -1px 0 black, 0 1px black, 0 -1px black;
+  }
+
+  .card-month {
+    text-transform: uppercase;
+  }
+}
+
 footer {
   color: $secondary-text;
 
