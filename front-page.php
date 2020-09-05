@@ -166,64 +166,116 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-6 col-md-3 p-0">
-                <div
-                  class="showcase-box h-100 d-flex justify-content-center flex-column"
-                >
-                  <span>APPS</span>
-                </div>
+                <a href="#">
+                  <div
+                    class="showcase-box h-100 d-flex justify-content-center flex-column"
+                  >
+                    <span>APPS</span>
+                  </div>
+                </a>
               </div>
               <div class="col-6 col-md-3 p-0">
-                <div class="showcase-img">
-                  <?php
-                  $images = rwmb_meta('showcase-app', array(
-                    'size' => 'auto'
-                  ));
+                <a href="#">
+                  <div class="showcase-img">
+                    <?php
+                    $apps = rwmb_meta('showcase-app', array(
+                      'limit' => 1,
+                      'size' => 'auto'
+                    ));
+                    $app = reset($apps);
 
-                  echo '
-                    <img src="',
-                    $image['url'],
-                    '" class="img-fluid" /> 
-                    ';
-                  ?>
-                </div>
+                    echo '
+                      <img src="',
+                      $app['url'],
+                      '" class="img-fluid" /> 
+                      ';
+                    ?>
+                  </div>
+                </a>
               </div>
               <div class="col-6 col-md-3 p-0">
-                <div
-                  class="showcase-box h-100 d-flex justify-content-center flex-column"
-                >
-                  <span>Specialty Pizzas</span>
-                </div>
+                <a href="<?php echo get_permalink(56); ?>#pizzas">
+                  <div
+                    class="showcase-box h-100 d-flex justify-content-center flex-column"
+                  >
+                    <span>Specialty Pizzas</span>
+                  </div>
+                </a>
               </div>
               <div class="col-6 col-md-3 p-0">
-                <div class="showcase-img">
-                  <img src="./img/showcase/pizza.jpg" class="img-fluid" />
-                </div>
+                <a href="<?php echo get_permalink(56); ?>#pizzas">
+                  <div class="showcase-img">
+                    <?php
+                    $pizzas = rwmb_meta('showcase-pizza', array(
+                      'limit' => 1,
+                      'size' => 'auto'
+                    ));
+                    $pizza = reset($pizzas);
+
+                    echo '
+                      <img src="',
+                      $pizza['url'],
+                      '" class="img-fluid" /> 
+                      ';
+                    ?>
+                  </div>
+                </a>
               </div>
             </div>
             <div class="row">
               <div class="col-6 col-md-3 p-0">
-                <div class="showcase-img">
-                  <img src="./img/showcase/burger.jpg" class="img-fluid" />
-                </div>
+                <a href="#">
+                  <div class="showcase-img">
+                    <?php
+                    $burgers = rwmb_meta('showcase-burger', array(
+                      'limit' => 1,
+                      'size' => 'auto'
+                    ));
+                    $burger = reset($burgers);
+
+                    echo '
+                      <img src="',
+                      $burger['url'],
+                      '" class="img-fluid" /> 
+                      ';
+                    ?>
+                  </div>
+                </a>
               </div>
               <div class="col-6 col-md-3 p-0">
-                <div
-                  class="showcase-box h-100 d-flex justify-content-center flex-column"
-                >
-                  <span>Burgers</span>
+                <a href="#">
+                  <div
+                    class="showcase-box h-100 d-flex justify-content-center flex-column"
+                  >
+                    <span>Burgers</span>
+                  </div>
                 </div>
+                <div class="col-6 col-md-3 p-0">
+                  <div class="showcase-img">
+                  <?php
+                  $drinks = rwmb_meta('showcase-drinks', array(
+                    'limit' => 1,
+                    'size' => 'auto'
+                  ));
+                  $drink = reset($drinks);
+
+                  echo '
+                    <img src="',
+                    $drink['url'],
+                    '" class="img-fluid" /> 
+                    ';
+                  ?>
+                  </div>
+                </a>
               </div>
               <div class="col-6 col-md-3 p-0">
-                <div class="showcase-img">
-                  <img src="./img/showcase/cocktail.jpg" class="img-fluid" />
-                </div>
-              </div>
-              <div class="col-6 col-md-3 p-0">
-                <div
-                  class="showcase-box h-100 d-flex justify-content-center flex-column"
-                >
-                  <span>DRINKS</span>
-                </div>
+                <a href="#">
+                  <div
+                    class="showcase-box h-100 d-flex justify-content-center flex-column"
+                  >
+                    <span>DRINKS</span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -232,10 +284,16 @@
           <div class="container">
             <h2 class="text-center">Upcoming Events</h2>
             <div class="row">
-
-              <?php $the_query = new WP_Query('posts_per_page=3'); ?>
               
               <?php
+              $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => '3',
+                'orderby' => 'meta_value_min',
+                'meta_key' => 'event-date',
+                'order' => 'ASC'
+              );
+              $the_query = new WP_Query($args);
               while ($the_query->have_posts()):
                 $the_query->the_post(); ?>
               
@@ -243,18 +301,14 @@
                 <div class="card mx-auto" style="background: url('<?php echo get_the_post_thumbnail_url(); ?>')">
                   <div class="ml-auto card-date text-center m-3">
                     <h5 class="card-title card-month">
-                      <?php echo get_post_meta(
-                        get_the_ID(),
-                        'event-month',
-                        true
-                      ); ?>
+                      <?php rwmb_the_value('event-date', array(
+                        'format' => 'M'
+                      )); ?>
                     </h5>
                     <h5 class="card-title card-date">
-                      <?php echo get_post_meta(
-                        get_the_ID(),
-                        'event-day',
-                        true
-                      ); ?>
+                      <?php rwmb_the_value('event-date', array(
+                        'format' => 'j'
+                      )); ?>
                     </h5>
                   </div>
                   <div class="card-body d-flex flex-column">
@@ -270,7 +324,9 @@
               wp_reset_postdata();
               ?>
             </div>
-            <a href="#" class="justify-content-center">See more upcoming events</a>
+            <div class="row">
+              <a href="#" class="mx-auto">See more upcoming events</a>
+            </div>
           </div>
         </section>
       </main>

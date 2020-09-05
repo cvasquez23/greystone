@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php wp_head(); ?>
   </head>
-  <body>
+  <body <?php body_class(); ?>>
     <!-- WP Admin Bar Overlapping Fix -->
     <?php if (is_admin_bar_showing()) { ?>
       <style>
@@ -40,7 +40,7 @@
         </div>
         <ul class="sidebar-navigation">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<?php echo get_permalink(56); ?>" class="nav-link">
               <i class="fas fa-utensils col-3"></i>
               <span class="col-9">Food Menu</span>
             </a>
@@ -91,7 +91,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="<?php echo get_permalink(56); ?>" class="nav-link">
                 <i class="fas fa-utensils col-3"></i>
                 <span class="col-9">Food Menu</span>
               </a>

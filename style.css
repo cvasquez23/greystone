@@ -191,6 +191,9 @@ footer .credit {
 
 .carousel-item {
   height: 75vh; }
+  .carousel-item img {
+    height: inherit;
+    width: inherit; }
 
 .carousel-item:after {
   content: '';
@@ -309,9 +312,14 @@ nav button:focus {
   background-color: #1f222b;
   color: #e1e4e9; }
 
+#showcase a {
+  text-decoration: none; }
+
 #showcase .showcase-box {
   background-color: black;
   text-align: center; }
+  #showcase .showcase-box span {
+    color: white; }
 
 #showcase .showcase-img img {
   width: 100%;
@@ -320,4 +328,7 @@ nav button:focus {
   background-attachment: fixed; }
 
 #events {
+  background-color: #e1e4e9; }
+
+.menu-body {
   background-color: #e1e4e9; }

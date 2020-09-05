@@ -36,9 +36,17 @@
 }
 
 #showcase {
+  a {
+    text-decoration: none;
+  }
+
   .showcase-box {
     background-color: black;
     text-align: center;
+
+    span {
+      color: white;
+    }
   }
   .showcase-img {
     img {

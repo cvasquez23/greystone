@@ -1,5 +1,10 @@
 .carousel-item {
   height: 75vh;
+
+  img {
+    height: inherit;
+    width: inherit;
+  }
 }
 
 .carousel-item:after {

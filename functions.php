@@ -132,7 +132,7 @@ function add_homepage_showcase($meta_boxes)
         'max_file_uploads' => '1'
       ),
       array(
-        'id' => 'showcase-app',
+        'id' => 'showcase-pizza',
         'type' => 'image_advanced',
         'name' => esc_html__('Pizza Picture', 'homepage-showcase-pizza'),
         'max_file_uploads' => '1'
@@ -159,8 +159,10 @@ add_filter('rwmb_meta_boxes', 'add_homepage_showcase');
 //Add Event Date and Time
 function add_event_date_time($meta_boxes)
 {
+  $prefix = '';
+
   $meta_boxes[] = array(
-    'id' => 'event_date_time',
+    'id' => 'event-date-time',
     'title' => esc_html__('Event Date and Time', 'event-date-time'),
     'post_types' => array('post'),
     'context' => 'advanced',
@@ -168,28 +170,18 @@ function add_event_date_time($meta_boxes)
     'autosave' => 'false',
     'fields' => array(
       array(
-        'id' => 'event-month',
-        'type' => 'text',
-        'name' => esc_html__('Event Month', 'event-date-time'),
-        'desc' => esc_html__(
-          'Month of the event (Use shorthand for best results ex. August = Aug)',
-          'event-date-time'
-        )
+        'id' => $prefix . 'event-date',
+        'type' => 'date',
+        'name' => esc_html__('Event Date', 'event-date-time'),
+        'desc' => esc_html__('description here', 'event-date-time'),
+        'js_options' => array(),
+        'timestamp' => 'true'
       ),
       array(
-        'id' => 'event-day',
-        'type' => 'number',
-        'name' => esc_html__('Event Day', 'event-date-time'),
-        'desc' => esc_html__('Day of the event', 'event-date-time'),
-        'min' => '1',
-        'max' => '31',
-        'step' => '1'
-      ),
-      array(
-        'id' => 'event-time',
-        'name' => esc_html__('Event Time', 'event-date-time'),
+        'id' => $prefix . 'event-time',
+        'name' => esc_html__('Event Time (optional)', 'event-date-time'),
         'type' => 'time',
-        'desc' => esc_html__('Time of the event (optional)', 'event-date-time')
+        'desc' => esc_html__('description here', 'event-date-time')
       )
     )
   );
@@ -197,4 +189,14 @@ function add_event_date_time($meta_boxes)
   return $meta_boxes;
 }
 add_filter('rwmb_meta_boxes', 'add_event_date_time');
+
+add_filter('register_post_type_args', 'custom_restaurant_menu_slug', 10, 2);
+function custom_restaurant_menu_slug($args, $post_type)
+{
+  if ('mp_menu_item' === $post_type) {
+    $args['rewrite']['slug'] = 'menu-item';
+  }
+
+  return $args;
+}
 ?>
