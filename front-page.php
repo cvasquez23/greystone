@@ -24,9 +24,9 @@
                 <div class="carousel-inner">
 
                   <?php
-                  $images = rwmb_meta('homepage-carousel', array(
-                    'size' => 'auto'
-                  ));
+                  $images = rwmb_meta('homepage-carousel', [
+                    'size' => 'auto',
+                  ]);
                   $i = 0;
                   foreach ($images as $image) {
                     if ($i == 0) {
@@ -81,7 +81,7 @@
                 </p>
               </div>
               <div class="col-md-6 abt-pic">
-                <img src="https://placekitten.com/g/300/300" alt="" />
+                <img src="https://greystone.chrisvasquez.dev/wp-content/uploads/2020/10/owner-picture.png" alt="" />
               </div>
             </div>
           </div>
@@ -153,9 +153,9 @@
               <div class="col-12 text-center happy-hour">
                 <h2>Join Us for Happy Hour</h2>
                 <p>
-                  Daily &dot; 3 PM - 6 PM &amp; 9 PM - Close &dot; $1 off Pints
+                  Daily &middot; 3 PM - 6 PM &amp; 9 PM - Close &middot; $1 off Pints
                   / $2 off pitchers <br />
-                  Wednesday &dot; 5 PM - Close &dot; $2 off specialty drinks /
+                  Wednesday &middot; 5 PM - Close &middot; $2 off specialty drinks /
                   $1 off pints
                 </p>
               </div>
@@ -165,8 +165,10 @@
         <section id="showcase">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-6 col-md-3 p-0">
-                <a href="#">
+
+              <!-- APPS -->
+              <div class="col-6 col-md-3 order-1 p-0">
+                <a href="<?php echo get_permalink(56); ?>#apps">
                   <div
                     class="showcase-box h-100 d-flex justify-content-center flex-column"
                   >
@@ -174,14 +176,14 @@
                   </div>
                 </a>
               </div>
-              <div class="col-6 col-md-3 p-0">
-                <a href="#">
+              <div class="col-6 col-md-3 order-2 p-0">
+                <a href="<?php echo get_permalink(56); ?>#apps">
                   <div class="showcase-img">
                     <?php
-                    $apps = rwmb_meta('showcase-app', array(
+                    $apps = rwmb_meta('showcase-app', [
                       'limit' => 1,
-                      'size' => 'auto'
-                    ));
+                      'size' => 'auto',
+                    ]);
                     $app = reset($apps);
 
                     echo '
@@ -193,7 +195,9 @@
                   </div>
                 </a>
               </div>
-              <div class="col-6 col-md-3 p-0">
+
+              <!-- PIZZAS -->
+              <div class="col-6 col-md-3 order-5 order-md-3 p-0">
                 <a href="<?php echo get_permalink(56); ?>#pizzas">
                   <div
                     class="showcase-box h-100 d-flex justify-content-center flex-column"
@@ -202,14 +206,14 @@
                   </div>
                 </a>
               </div>
-              <div class="col-6 col-md-3 p-0">
+              <div class="col-6 col-md-3 order-6 order-md-4 p-0">
                 <a href="<?php echo get_permalink(56); ?>#pizzas">
                   <div class="showcase-img">
                     <?php
-                    $pizzas = rwmb_meta('showcase-pizza', array(
+                    $pizzas = rwmb_meta('showcase-pizza', [
                       'limit' => 1,
-                      'size' => 'auto'
-                    ));
+                      'size' => 'auto',
+                    ]);
                     $pizza = reset($pizzas);
 
                     echo '
@@ -223,14 +227,16 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6 col-md-3 p-0">
-                <a href="#">
+
+              <!-- BURGERS -->
+              <div class="col-6 col-md-3 order-3 order-md-5 p-0">
+                <a href="<?php echo get_permalink(51); ?>#burgers">
                   <div class="showcase-img">
                     <?php
-                    $burgers = rwmb_meta('showcase-burger', array(
+                    $burgers = rwmb_meta('showcase-burger', [
                       'limit' => 1,
-                      'size' => 'auto'
-                    ));
+                      'size' => 'auto',
+                    ]);
                     $burger = reset($burgers);
 
                     echo '
@@ -242,21 +248,23 @@
                   </div>
                 </a>
               </div>
-              <div class="col-6 col-md-3 p-0">
-                <a href="#">
+              <div class="col-6 col-md-3 order-4 order-md-6 p-0">
+                <a href="<?php echo get_permalink(51); ?>#burgers">
                   <div
                     class="showcase-box h-100 d-flex justify-content-center flex-column"
                   >
                     <span>Burgers</span>
                   </div>
                 </div>
-                <div class="col-6 col-md-3 p-0">
+
+                <!-- DRINKS -->
+                <div class="col-6 col-md-3 order-7 p-0">
                   <div class="showcase-img">
                   <?php
-                  $drinks = rwmb_meta('showcase-drinks', array(
+                  $drinks = rwmb_meta('showcase-drinks', [
                     'limit' => 1,
-                    'size' => 'auto'
-                  ));
+                    'size' => 'auto',
+                  ]);
                   $drink = reset($drinks);
 
                   echo '
@@ -268,8 +276,8 @@
                   </div>
                 </a>
               </div>
-              <div class="col-6 col-md-3 p-0">
-                <a href="#">
+              <div class="col-6 col-md-3 order-8 p-0">
+                <a href="<?php echo get_permalink(51); ?>#drinks">
                   <div
                     class="showcase-box h-100 d-flex justify-content-center flex-column"
                   >
@@ -286,13 +294,13 @@
             <div class="row">
               
               <?php
-              $args = array(
+              $args = [
                 'post_type' => 'post',
                 'posts_per_page' => '3',
                 'orderby' => 'meta_value_min',
                 'meta_key' => 'event-date',
-                'order' => 'ASC'
-              );
+                'order' => 'ASC',
+              ];
               $the_query = new WP_Query($args);
               while ($the_query->have_posts()):
                 $the_query->the_post(); ?>
@@ -301,14 +309,14 @@
                 <div class="card mx-auto" style="background: url('<?php echo get_the_post_thumbnail_url(); ?>')">
                   <div class="ml-auto card-date text-center m-3">
                     <h5 class="card-title card-month">
-                      <?php rwmb_the_value('event-date', array(
-                        'format' => 'M'
-                      )); ?>
+                      <?php rwmb_the_value('event-date', [
+                        'format' => 'M',
+                      ]); ?>
                     </h5>
                     <h5 class="card-title card-date">
-                      <?php rwmb_the_value('event-date', array(
-                        'format' => 'j'
-                      )); ?>
+                      <?php rwmb_the_value('event-date', [
+                        'format' => 'j',
+                      ]); ?>
                     </h5>
                   </div>
                   <div class="card-body d-flex flex-column">
@@ -331,4 +339,5 @@
         </section>
       </main>
 
-<?php get_footer(); ?>
+<?php get_footer();
+?>

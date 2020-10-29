@@ -120,11 +120,11 @@ html {
   .body p,
   html p {
     font-family: 'Noto Serif', serif;
-    font-size: 14px; }
+    font-size: 0.9rem; }
     @media only screen and (min-width: 768px) {
       .body p,
       html p {
-        font-size: 16px; } }
+        font-size: 1rem; } }
 
 .sidebar-container {
   color: #e1e4e9; }
@@ -134,18 +134,18 @@ html {
       color: #e1e4e9; }
 
 #home h1 {
-  font-size: 45px;
+  font-size: 2.8rem;
   text-shadow: -1px 0 black, 0 1px black, 0 -1px black; }
   @media only screen and (min-width: 768px) {
     #home h1 {
-      font-size: 90px; } }
+      font-size: 5.6rem; } }
 
 #home h6 {
-  font-size: 20px;
+  font-size: 1.25rem;
   text-shadow: -1px 0 black, 0 1px black, 0 -1px black; }
   @media only screen and (min-width: 768px) {
     #home h6 {
-      font-size: 30px; } }
+      font-size: 1.9rem; } }
 
 #about {
   color: #e1e4e9; }
@@ -153,11 +153,11 @@ html {
 #showcase {
   color: #e1e4e9; }
   #showcase span {
-    font-size: 25px;
+    font-size: 1.6rem;
     font-family: 'Oswald', sans-serif; }
     @media only screen and (min-width: 768px) {
       #showcase span {
-        font-size: 50px; } }
+        font-size: 3.2rem; } }
   #showcase .showcase-box {
     text-transform: uppercase; }
 
@@ -192,8 +192,10 @@ footer .credit {
 .carousel-item {
   height: 75vh; }
   .carousel-item img {
-    height: inherit;
-    width: inherit; }
+    min-width: 350px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
 
 .carousel-item:after {
   content: '';
@@ -284,6 +286,28 @@ nav {
     nav a:hover {
       color: #e1e4e9; }
 
+.navbar-collapse {
+  position: absolute;
+  top: 54px;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.4s ease;
+  display: block;
+  opacity: 0.8;
+  background-color: #a32a2f; }
+
+.navbar-collapse.collapsing {
+  left: -100%;
+  margin-left: 1px;
+  transition: all 0.2s ease;
+  opacity: 0.9; }
+
+.navbar-collapse.show {
+  margin-left: 100%;
+  transition: all 0.2s ease;
+  opacity: 1; }
+
 nav button:focus {
   outline: none; }
 
@@ -296,7 +320,8 @@ nav button:focus {
     color: white;
     position: absolute;
     top: 30%;
-    width: 96.667%;
+    left: 55%;
+    transform: translate(-55%, -30%);
     z-index: 100; }
 
 #about {

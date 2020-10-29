@@ -14,10 +14,10 @@ html {
 
   p {
     font-family: 'Noto Serif', serif;
-    font-size: 14px;
+    font-size: 0.9rem;
 
     @include for-md-up {
-      font-size: 16px;
+      font-size: 1rem;
     }
   }
 }
@@ -38,20 +38,20 @@ html {
 
 #home {
   h1 {
-    font-size: 45px;
+    font-size: 2.8rem;
     text-shadow: -1px 0 black, 0 1px black, 0 -1px black;
 
     @include for-md-up {
-      font-size: 90px;
+      font-size: 5.6rem;
     }
   }
 
   h6 {
-    font-size: 20px;
+    font-size: 1.25rem;
     text-shadow: -1px 0 black, 0 1px black, 0 -1px black;
 
     @include for-md-up {
-      font-size: 30px;
+      font-size: 1.9rem;
     }
   }
 }
@@ -64,11 +64,11 @@ html {
   color: $secondary-text;
 
   span {
-    font-size: 25px;
+    font-size: 1.6rem;
     font-family: 'Oswald', sans-serif;
 
     @include for-md-up {
-      font-size: 50px;
+      font-size: 3.2rem;
     }
   }
 

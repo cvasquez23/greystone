@@ -1,6 +1,7 @@
 .sidebar-container {
   position: fixed;
   width: 125px;
+  //width: 12%;
   height: 100%;
   left: 0;
   text-align: left;
@@ -80,4 +81,28 @@ nav {
       color: $secondary-text;
     }
   }
+}
+
+.navbar-collapse {
+  position: absolute;
+  top: 54px;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.4s ease;
+  display: block;
+  opacity: 0.8;
+  background-color: $alternative-color;
+}
+.navbar-collapse.collapsing {
+  //height: auto !important;
+  left: -100%;
+  margin-left: 1px;
+  transition: all 0.2s ease;
+  opacity: 0.9;
+}
+.navbar-collapse.show {
+  margin-left: 100%;
+  transition: all 0.2s ease;
+  opacity: 1;
 }
