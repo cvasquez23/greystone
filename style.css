@@ -126,6 +126,9 @@ html {
       html p {
         font-size: 1rem; } }
 
+.page-template .menu-header {
+  color: #e1e4e9; }
+
 .sidebar-container {
   color: #e1e4e9; }
   .sidebar-container .nav-item a {

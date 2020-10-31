@@ -20,6 +20,16 @@ html {
       font-size: 1rem;
     }
   }
+
+  a {
+    color: $text-color;
+  }
+}
+
+.page-template {
+  .menu-header {
+    color: $secondary-color;
+  }
 }
 
 .sidebar-container {

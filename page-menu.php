@@ -23,6 +23,8 @@
       <section class="menu-body">
         <div class="container">
           <div class="row justify-content-between">
+
+          <!-- SHORT CODE FOR DEV SERVER -->
           <?php echo do_shortcode(
             '
               <div id="apps">[mprm_items view="grid" categ="6" tags_list="" item_ids="" col="3" categ_name="only_text" show_attributes="1" feat_img="1" excerpt="1" price="1" tags="1" ingredients="1" desc_length=""]</div>
@@ -36,4 +38,5 @@
       </section>
 
 
-<?php get_footer(); ?>
+<?php get_footer();
+?>

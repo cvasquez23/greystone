@@ -333,7 +333,10 @@
               ?>
             </div>
             <div class="row">
-              <a href="#" class="mx-auto">See more upcoming events</a>
+              <a 
+                href="<?php echo get_permalink(40); ?>" 
+                class="mx-auto">See more upcoming events
+              </a>
             </div>
           </div>
         </section>
